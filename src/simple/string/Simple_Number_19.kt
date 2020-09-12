@@ -1,5 +1,9 @@
 package simple.string
 
+import dataStructure.ListNode
+import dataStructure.createListNode
+import dataStructure.printListNode
+
 class Simple_Number_19 {
 
     //region 19. 删除链表的倒数第N个节点
@@ -27,7 +31,7 @@ class Simple_Number_19 {
             val original = createListNode(intArrayOf(1, 2, 3, 4, 5))
             print(original)
             val result = removeNthFromEnd(original, 2)
-            print(result)
+            printListNode(result)
         }
 
         /**
@@ -63,38 +67,6 @@ class Simple_Number_19 {
             slow?.next = slow?.next?.next
 
             return dummy.next
-        }
-
-
-        private fun createListNode(array: IntArray): ListNode? {
-            if (array.isEmpty()) {
-                return null
-            }
-            val dummyNode = ListNode(0)
-            var node: ListNode? = ListNode(array[0])
-            dummyNode.next = node
-            for (index in 1 until array.size) {
-                node!!.next = ListNode(array[index])
-                node = node!!.next
-            }
-
-            return dummyNode.next
-        }
-
-        private fun print(head: ListNode?) {
-            if (head == null) {
-                return
-            }
-            println()
-            var p = head
-            while (p != null) {
-                print("${p.`val`}->")
-                p = p.next
-            }
-        }
-
-        class ListNode(val `val`: Int) {
-            var next: ListNode? = null
         }
     }
 
