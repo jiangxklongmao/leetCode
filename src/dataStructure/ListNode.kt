@@ -1,9 +1,7 @@
 package dataStructure
 
-import simple.string.Simple_Number_19
-
 class ListNode(val `val`: Int) {
-    var next: ListNode? = null
+    public var next: ListNode? = null
 }
 
 fun createListNode(array: IntArray): ListNode? {
@@ -21,7 +19,7 @@ fun createListNode(array: IntArray): ListNode? {
     return dummyNode.next
 }
 
- fun printListNode(head: ListNode?) {
+fun printListNode(head: ListNode?) {
     if (head == null) {
         return
     }
