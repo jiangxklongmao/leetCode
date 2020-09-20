@@ -43,9 +43,9 @@ public class Offer_06 {
 
         while (head != null) {
             p = head;
-            head = head.getNext();
+            head = head.next;
 
-            p.setNext(newHead);
+            p.next = newHead;
             newHead = p;
             size++;
         }
@@ -54,8 +54,8 @@ public class Offer_06 {
         int k = 0;
         p = newHead;
         while (p != null) {
-            result[k++] = p.getVal();
-            p = p.getNext();
+            result[k++] = p.val;
+            p = p.next;
         }
 
         return result;
