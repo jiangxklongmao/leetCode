@@ -1,7 +1,8 @@
 package dataStructure
 
-class ListNode(val `val`: Int) {
-    public var next: ListNode? = null
+class ListNode(@JvmField val `val`: Int) {
+    @JvmField
+     var next: ListNode? = null
 }
 
 fun createListNode(array: IntArray): ListNode? {
